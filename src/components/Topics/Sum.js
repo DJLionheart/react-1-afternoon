@@ -26,7 +26,7 @@ export default class Sum extends Component {
     }
 
     render() {
-        let { number1, number2, sum } = this.state;
+        let { sum } = this.state;
         return (
             <div className="puzzleBox sumPB">
                 <h4>Sum</h4>
