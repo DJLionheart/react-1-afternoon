@@ -41,7 +41,8 @@ export default class FilterString extends Component {
         console.log(originalArray);
         console.log(newArray);
         this.setState({
-            filteredArray: newArray
+            filteredArray: newArray,
+            userInput: ''
         })
 
     }
@@ -54,7 +55,7 @@ export default class FilterString extends Component {
             <div className="puzzleBox filterStringPB">
                 <h4>Filter String</h4>
                 <span className="puzzleText">Spelunky Items: { JSON.stringify(unFilteredArray, null, 10) }</span>
-                <input className="inputLine" onChange={ ( e ) => this.handleInput( e.target.value ) }/>
+                <input className="inputLine" placeholder="What items are you looking for?" onChange={ ( e ) => this.handleInput( e.target.value ) }/>
                 <button className="confirmationButton" onClick={ () => this.filter( userInput ) }>Filter</button>
                 <span className="resultsBox filterStringRB">
                     Filtered Spelunky Items: { JSON.stringify(filteredArray, null, 10) }

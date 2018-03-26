@@ -36,7 +36,7 @@ class EvenAndOdd extends Component {
         return (
             <div className="puzzleBox evenAndOddPB">
                 <h4>Evens and Odds</h4>
-                <input className="inputLine" type="text"
+                <input className="inputLine" placeholder="Enter array of numbers..."
                 onChange={ ( e ) => this.handleUserInput( e.target.value )}
                 />
 

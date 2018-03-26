@@ -19,6 +19,7 @@ export default class Palindrome extends Component {
         let reverseWord = input.split('').reverse().join('');
         if( input === reverseWord ) {this.setState({palindrome: 'true'})
         } else {this.setState({palindrome: 'false'})}
+        this.setState({userInput: ''})
     }
 
     render() {
@@ -28,7 +29,7 @@ export default class Palindrome extends Component {
         return (
             <div className="puzzleBox palindromePB">
                 <h4>Palindrome</h4>
-                <input className="inputLine" onChange={ (e) => this.handleInput( e.target.value )}/>
+                <input className="inputLine" placeholder="Type a word..." onChange={ (e) => this.handleInput( e.target.value )}/>
                 <button className="confirmationButton" onClick={ () => this.checkPalindrome( userInput )}>Check</button>
                 <span className="resultsBox">Palindrome: { palindrome }</span>
             </div>

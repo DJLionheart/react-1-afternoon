@@ -30,8 +30,8 @@ export default class Sum extends Component {
         return (
             <div className="puzzleBox sumPB">
                 <h4>Sum</h4>
-                <input className="inputLine" onChange={ ( e ) => this.handleNum1( e.target.value )}/>
-                <input className="inputLine" onChange={ ( e ) => this.handleNum2( e.target.value )}/>
+                <input className="inputLine" placeholder="Number 1" onChange={ ( e ) => this.handleNum1( e.target.value )}/>
+                <input className="inputLine" placeholder="Number 2"onChange={ ( e ) => this.handleNum2( e.target.value )}/>
                 <button className="confirmationButton" onClick={ () => this.add() }>Add</button>
                 <span className="resultsBox">Sum: { sum }</span>
             </div>
