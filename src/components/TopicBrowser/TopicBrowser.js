@@ -14,7 +14,6 @@ class TopicBrowser extends Component {
                 <FilterString />
                 <Palindrome />
                 <Sum />
-
             </div>
         )
     }
